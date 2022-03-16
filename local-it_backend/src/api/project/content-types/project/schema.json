@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectName": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "json"
+    },
+    "contributors": {
+      "type": "json"
+    },
+    "createdDate": {
+      "type": "date",
+      "required": true,
+      "default": "2022-01-01"
+    },
+    "keys": {
+      "type": "json"
+    }
+  }
+}

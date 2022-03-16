@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "keys",
+  "info": {
+    "singularName": "key",
+    "pluralName": "keys",
+    "displayName": "Key",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "keyName": {
+      "type": "string"
+    },
+    "platforms": {
+      "type": "json"
+    },
+    "translations": {
+      "type": "json"
+    }
+  }
+}
