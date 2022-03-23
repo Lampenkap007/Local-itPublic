@@ -81,10 +81,14 @@ const Login = () => {
         })
         .then(function (response) {
           localStorage.setItem("username", response.data.user.username);
+          localStorage.setItem(
+            "projects",
+            JSON.stringify(response.data.user.projects)
+          );
           localStorage.setItem("userId", response.data.user.id);
           localStorage.setItem("jwt", response.data.jwt);
 
-          window.open("/", "_self");
+          window.open("/dashboard", "_self");
         })
         .catch(function (error) {
           console.log(error);
@@ -118,7 +122,8 @@ const Login = () => {
       delay: 1,
       ease: "power3.out",
     });
-  });
+  }, []);
+
   return (
     <div className="loginPage">
       <div className="loginPageLeft">
