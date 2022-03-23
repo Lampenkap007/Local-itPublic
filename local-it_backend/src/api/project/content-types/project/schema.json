@@ -21,11 +21,6 @@
     "contributors": {
       "type": "json"
     },
-    "createdDate": {
-      "type": "date",
-      "required": true,
-      "default": "2022-01-01"
-    },
     "keys": {
       "type": "json"
     }

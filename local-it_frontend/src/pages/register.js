@@ -138,7 +138,8 @@ const Register = () => {
       delay: 1,
       ease: "power3.out",
     });
-  });
+  }, []);
+
   return (
     <div className="loginPage">
       <div className="loginPageLeft">
