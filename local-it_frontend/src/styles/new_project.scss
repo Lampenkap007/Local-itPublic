@@ -1,0 +1,236 @@
+$accent-color: #0085ff;
+$text-color: #777777;
+$text-color-light: #ffffff;
+
+.newProject {
+  padding: 50px;
+  padding-left: 350px;
+  width: 100%;
+  .newProjectTitle {
+    font-size: 30px;
+    color: $accent-color;
+  }
+  .newProjectDevider {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 0.5px;
+    width: 75%;
+    background-color: $text-color;
+  }
+  .newProjectGeneral {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+
+    .newProjectGeneralForm {
+      padding-top: 20px;
+
+      .newProjectGeneralFormProjectNameInput {
+        border: none;
+        height: 36px;
+        width: 250px;
+        border-radius: 50px;
+        padding-left: 25px;
+        background-color: rgba($accent-color, 0.15);
+        margin-left: 10px;
+      }
+      .newProjectGeneralFormProjectNameInput:focus {
+        outline: none;
+      }
+    }
+  }
+  .newProjectContributors {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+
+    .newProjectContributorsForm {
+      padding-top: 20px;
+      .newProjectContributorsFormLabel {
+        padding-top: 9px;
+      }
+      .newProjectContributorsFormEmail {
+        display: flex;
+        .newProjectContributorsFormEmailInputs {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            color: red;
+            padding-left: 35px;
+            font-size: 12px;
+          }
+          li {
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 15px;
+            padding-left: 35px;
+
+            a {
+              text-decoration: none;
+              cursor: pointer;
+            }
+            a:hover {
+              text-decoration: underline;
+            }
+            a:hover ~ .removeEmail {
+              display: block;
+            }
+
+            .removeEmail {
+              display: none;
+            }
+          }
+
+          .newProjectContributorsFormEmailInput {
+            border: none;
+            height: 36px;
+            width: 250px;
+            border-radius: 50px;
+            padding-left: 25px;
+            margin-bottom: 20px;
+            background-color: rgba($accent-color, 0.15);
+            margin-left: 10px;
+          }
+          .newProjectContributorsFormEmailInput:focus {
+            outline: none;
+          }
+
+          .newProjectContributorsFormEmailInputAdd {
+            border: none;
+            height: 36px;
+            width: 275px;
+            border-radius: 50px;
+
+            margin-bottom: 20px;
+            background-color: $accent-color;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+  .newProjectLanguages {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+
+    .newProjectLanguagesForm {
+      padding-top: 20px;
+      display: flex;
+
+      .newProjectLanguagesFormLabel {
+        padding-top: 9px;
+      }
+
+      .newProjectLanguagesFormFilterList {
+        .newProjectLanguagesFormFilterListSearch {
+          display: flex;
+          .newProjectLanguagesFormFilterListSearchInput {
+            border: none;
+            height: 36px;
+            width: 200px;
+            border-radius: 50px 0px 0px 50px;
+            padding-left: 25px;
+            background-color: rgba($accent-color, 0.15);
+            margin-left: 10px;
+          }
+          .newProjectLanguagesFormFilterListSearchInput:focus {
+            outline: none;
+          }
+          .newProjectLanguagesFormFilterListSearchIcon {
+            height: 36px;
+            width: 50px;
+            background-color: rgba($accent-color, 0.15);
+            border-radius: 0px 50px 50px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        .newProjectLanguagesFormLanguagesSelected {
+          margin-left: 35px;
+          list-style-type: none;
+
+          li {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 15px;
+
+            a {
+              text-decoration: none;
+            }
+            a:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+            a:hover ~ .removeLanguage {
+              display: block;
+            }
+          }
+
+          .addLanguage {
+            display: none;
+          }
+        }
+
+        .newProjectLanguagesFormFilterListUl {
+          margin-left: 35px;
+          list-style-type: none;
+
+          li {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 15px;
+
+            a {
+              text-decoration: none;
+            }
+            a:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+            a:hover ~ .addLanguage {
+              display: block;
+            }
+          }
+          .removeLanguage {
+            display: none;
+          }
+          .addLanguage {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .newProjectSubmit {
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+
+    button {
+      border: none;
+      height: 36px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 50px;
+      background-color: $accent-color;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
