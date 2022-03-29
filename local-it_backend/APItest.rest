@@ -1,13 +1,5 @@
-http://localhost:1337/api/user
+http://localhost:1337/api/users
 
-
-###
-POST http://localhost:1337/api/auth/local/
-content-type: application/json
-{
-    "identifier": "test@test.com",
-    "password": "admin1"
-}
 
 ###
 
@@ -17,8 +9,45 @@ Content-Type: application/json
 Content-Length: 66
 
 {
-    "identifier": "test@test.com",
+    "identifier": "jordifranssen@test.com",
     "password": "admin1"
+}
+
+###
+
+POST /api/users HTTP/1.1
+Host: localhost:1337
+Content-Type: application/json
+Content-Length: 66
+
+{
+    "username": "user1",
+    "email": "user1@test.com",
+    "password": "admin1",
+    "confirmed": true,
+    "blocked": false
+}
+
+
+###
+
+POST /api/projects HTTP/1.1
+Host: localhost:1337
+Content-Type: application/json
+Content-Length: 66
+
+
+{
+
+    "Headers": {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImlhdCI6MTY0ODU0MDg4OSwiZXhwIjoxNjUxMTMyODg5fQ.g70KpuGZFbCT5zE2ir2Bg5OLWt_aB7xLyB-_0RWBmDQ"
+    },
+
+    "body": {
+        "data": {
+            "projectName": "testItem"
+        }
+    }
 }
    
     

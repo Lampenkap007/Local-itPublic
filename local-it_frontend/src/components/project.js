@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import "./../styles/projects.scss";
 
 const Project = () => {
   let { id } = useParams();
@@ -24,7 +25,11 @@ const Project = () => {
       });
   }, []);
 
-  return <h1 id="title"></h1>;
+  return (
+    <div className="projects">
+      <h1 id="title"></h1>;
+    </div>
+  );
 };
 
 export default Project;

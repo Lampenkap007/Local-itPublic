@@ -38,11 +38,6 @@ const Sidebar = () => {
     await fetchProjects();
   }, []);
 
-  function logOut() {
-    localStorage.clear();
-    window.location.reload();
-  }
-
   function filterList() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("searchInput");
@@ -139,9 +134,7 @@ const Sidebar = () => {
         </div>
         <div className="sideBarBottomProfile">
           <img src={user} alt="" />
-          <a href="" onClick={logOut}>
-            {localStorage.getItem("username")}
-          </a>
+          <a href="/profile">{localStorage.getItem("username")}</a>
         </div>
       </div>
     </div>

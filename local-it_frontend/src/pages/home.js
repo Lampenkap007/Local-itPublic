@@ -6,6 +6,7 @@ import "./../styles/home.scss";
 import Settings from "../components/settings";
 import Project from "../components/project";
 import New_project from "../components/new_project";
+import Profile from "../components/profile";
 
 const Home = () => {
   if (localStorage.getItem("userId") === null) {
@@ -21,6 +22,7 @@ const Home = () => {
         <Route path="/new_project" element={<New_project />} />
         <Route path="/projects/:id" element={<Project />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );

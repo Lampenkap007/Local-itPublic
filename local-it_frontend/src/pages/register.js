@@ -55,6 +55,7 @@ const Register = () => {
             password: passwordRef.current.value,
             confirmed: true,
             blocked: false,
+            projects: [],
           })
           .then(function (response) {
             window.open("/login", "_self");
